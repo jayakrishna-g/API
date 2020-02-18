@@ -15,7 +15,7 @@ const getSign = function() {
 }
 
 const getOption = function (x,y) {
-    var b=0
+    var b = 0
     if( getSign()==true ) {
         b=x+Math.floor(Math.random()*y)
     }
