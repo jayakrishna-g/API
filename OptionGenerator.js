@@ -15,7 +15,7 @@ const getSign = function() {
 }
 
 const getOption = function (x,y) {
-    var b=0
+    var b = 0
     if( getSign()==true ) {
         b=x+Math.floor(Math.random()*y)
     }
@@ -32,6 +32,7 @@ const optionA = function (x,y) {
     retobj.OptionA = x
     retobj.OptionB = getOption(x,y)
     retobj.OptionC = getOption(x,y)
+    
     retobj.OptionD = getOption(x,y)
     retobj.Correct_Option = 1
 }
