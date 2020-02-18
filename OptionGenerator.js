@@ -32,6 +32,7 @@ const optionA = function (x,y) {
     retobj.OptionA = x
     retobj.OptionB = getOption(x,y)
     retobj.OptionC = getOption(x,y)
+    
     retobj.OptionD = getOption(x,y)
     retobj.Correct_Option = 1
 }
