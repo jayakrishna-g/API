@@ -1,8 +1,8 @@
-var express = require('express')
-var question=require('./question.js')
+const express = require('express')
+const question=require('./question')
 
-var app = express()
-var bodyParser = require('body-parser')
+const app = express()
+const bodyParser = require('body-parser')
 
 
 // parse various different custom JSON types as JSON
@@ -14,17 +14,16 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 // parse an HTML body into a string
 app.use(bodyParser.text({ type: 'text/html' }))
 
-app.get('/getQuestion',function(req,res){
+app.get('/Question',function(req,res){
     console.log(req.body)
     var questionJSON=question.getquestion()
     res.send(questionJSON)
 })
 
-app.get('/getQuestion/:questionId',function(req,res){
-    console.log(req.body)
+app.get('/Question/:questionId',function(req,res){
     var quid = req.params.questionId;
     console.log(quid);
-    var questionJSON=question.getquestion()
+    var questionJSON=question.getquestion(quid)
     res.send(questionJSON)
 })
 
